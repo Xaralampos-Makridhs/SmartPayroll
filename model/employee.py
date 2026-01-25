@@ -10,7 +10,7 @@ class Employee:
         self._validation()
 
     def _validation(self):
-        if not self.fullname.strip()==0:
+        if  len(self.fullname.strip())==0:
             raise ValueError("Full name is required and cannot be empty.")
         if self.emp_id<0:
             raise ValueError("Id must be positive number.")
