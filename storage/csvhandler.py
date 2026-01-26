@@ -7,8 +7,7 @@ from model.employee import Employee
 class CSVHandler:
     def __init__(self,filepath="data/payroll.csv"):
         self.filepath=filepath
-        self.fieldnames=["ID","Full Name","Base Salary","Department","Overtime hours","Hourly Rate"]
-
+        self.fieldnames = ["ID", "Full Name", "Base Salary", "Department", "Overtime Hours", "Hourly Rate"]
         self._initialize()
 
 
@@ -78,7 +77,7 @@ class CSVHandler:
 
                 for emp in updated_list:
                     writer.writerow(emp.to_dict())
-                    return True
+                return True
         except FileNotFoundError,PermissionError:
             return False
 
@@ -96,7 +95,6 @@ class CSVHandler:
 
         if not found:
             return False
-        
         try:
             with open(self.filepath, "w", newline="", encoding="utf-8") as f:
                 writer = csv.DictWriter(f, fieldnames=self.fieldnames)
@@ -105,8 +103,5 @@ class CSVHandler:
                 for emp in new_data:
                     writer.writerow(emp.to_dict())
             return True
-
         except (FileNotFoundError, PermissionError):
             return False
-
-

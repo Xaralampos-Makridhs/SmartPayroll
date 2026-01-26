@@ -33,13 +33,12 @@ class Employee:
 
     def to_dict(self):
         return {
-            "Employee ID": self.emp_id,
+            "ID": self.emp_id,
             "Full Name": self.fullname,
             "Department": self.department,
             "Base Salary": self.base_salary,
             "Overtime Hours": self.overtime_hours,
             "Hourly Rate": self.hourly_rate,
-            "Total Gross": self.get_total_gross_salary()
         }
 
     def __str__(self):
