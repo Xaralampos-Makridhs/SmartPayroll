@@ -1,7 +1,6 @@
 import unittest
 
 from model.employee import Employee
-from storage import csvhandler
 from storage.csvhandler import CSVHandler
 import os
 
