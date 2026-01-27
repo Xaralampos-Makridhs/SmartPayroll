@@ -7,7 +7,7 @@ from model.employee import Employee
 class CSVHandler:
     def __init__(self,filepath="data/payroll.csv"):
         self.filepath=filepath
-        self.fieldnames = ["ID", "Full Name", "Base Salary", "Department", "Overtime Hours", "Hourly Rate"]
+        self.fieldnames = ["ID", "Full Name", "Base Salary", "Department","Email","Overtime Hours", "Hourly Rate"]
         self._initialize()
 
 
@@ -52,6 +52,7 @@ class CSVHandler:
                         emp_id=int(row["ID"]),
                         fullname=row["Full Name"],
                         department=row["Department"],
+                        email=row["Email"],
                         base_salary=float(row["Base Salary"]),
                         overtime_hours=float(row["Overtime Hours"]),
                         hourly_rate=float(row["Hourly Rate"])

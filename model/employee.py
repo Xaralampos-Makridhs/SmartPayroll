@@ -1,8 +1,9 @@
 class Employee:
-    def __init__(self,emp_id:int,fullname:str,department:str,base_salary:float,overtime_hours:float,hourly_rate:float):
+    def __init__(self,emp_id:int,fullname:str,department:str,email:str,base_salary:float,overtime_hours:float,hourly_rate:float):
         self.emp_id=emp_id
         self.fullname=fullname
         self.department=department
+        self.email=email
         self.base_salary=base_salary
         self.overtime_hours=overtime_hours
         self.hourly_rate=hourly_rate
@@ -16,6 +17,8 @@ class Employee:
             raise ValueError("Id must be positive number.")
         if len(self.department)==0:
             raise ValueError("Department is required.")
+        if "@" not in self.email or "." not in self.email:
+            raise ValueError("Email must have @ and . ")
         if self.base_salary<=0:
             raise ValueError("Base salary must be positive number.")
         if self.overtime_hours<0:
@@ -36,6 +39,7 @@ class Employee:
             "ID": self.emp_id,
             "Full Name": self.fullname,
             "Department": self.department,
+            "Email": self.email,
             "Base Salary": self.base_salary,
             "Overtime Hours": self.overtime_hours,
             "Hourly Rate": self.hourly_rate,
