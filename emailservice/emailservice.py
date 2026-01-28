@@ -4,12 +4,10 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
 
-# Αυτή η εντολή ψάχνει το αρχείο .env στο root και φορτώνει τις τιμές
 load_dotenv()
 
 class EmailService:
     def __init__(self):
-        # Τραβάμε τις τιμές από το σύστημα πλέον, όχι "καρφωτά"
         self.sender_email = os.getenv("EMAIL_USER")
         self.password = os.getenv("EMAIL_PASS")
         self.smtp_server = "smtp.gmail.com"
