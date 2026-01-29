@@ -63,7 +63,7 @@ Installation / Quick start
    - Create a `.env` file in the repository root with:
      ```env
      EMAIL_USER=your.email@example.com
-     EMAIL_PASS=your-email-password-or-app-password
+     EMAIL_PASS=app-password
      ```
    Note: If using Gmail you may need to create an App Password or allow less secure apps (where applicable). The application uses `smtp.gmail.com:587` by default.
 
