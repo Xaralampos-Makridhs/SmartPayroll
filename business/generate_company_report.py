@@ -7,6 +7,7 @@ class CompanyReport:
         self.TAX_RATE=0.20 #20%
 
     def calculate_employee_payroll(self,employee:Employee)->dict:
+        """Calculates the salary of employees"""
         total_gross=employee.get_total_gross_salary()
 
         insurance=round(total_gross*self.INSURANCE_RATE,2)
@@ -24,6 +25,8 @@ class CompanyReport:
         }
 
     def generate_company_report(self, employees_list: list) -> dict:
+        """Generates a report for the company about the total gross of employees"""
+
         report = {
             "Total Employees": len(employees_list),
             "Total Net Pay": 0.0,

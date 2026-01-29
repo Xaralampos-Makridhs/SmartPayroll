@@ -6,7 +6,7 @@ from storage.csvhandler import CSVHandler
 from payslip.format_payslip import format_payslip
 
 def show_menu():
-  print("\n"+ "="*50)
+  print("\n"+ "="*30)
   print("    PAYROLL MANAGEMENT SYSTEM    ")
   print("="*30)
   print("1. View Employees and Salaries")
@@ -19,7 +19,10 @@ def show_menu():
   print("="*30)
 
 def main():
-    #Initialization
+    """Main entry point for the payroll Management System.
+       Coordinates user input,payroll calculation, data persistence via CSV, and automated distribution of payslips
+    """
+
     handler=CSVHandler("data/payroll.csv")
     calculator=PayrollCalculator()
     reporter=CompanyReport()
@@ -126,6 +129,7 @@ def main():
             sys.exit()
         else:
             print("Invalid selection.Try again.")
+
 
 if __name__=="__main__":
     main()

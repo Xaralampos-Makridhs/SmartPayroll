@@ -11,6 +11,7 @@ class Employee:
         self._validation()
 
     def _validation(self):
+        """Validates if the user inputs are logical valid"""
         if  len(self.fullname.strip())==0:
             raise ValueError("Full name is required and cannot be empty.")
         if self.emp_id<0:
@@ -29,12 +30,14 @@ class Employee:
 
 
     def calculate_gross_salary(self)->float:
+        """Calculates gross salary(overtime hours * hourly rate)"""
         return self.overtime_hours*self.hourly_rate
 
     def get_total_gross_salary(self)->float:
         return self.base_salary+self.calculate_gross_salary()
 
     def to_dict(self):
+        """Returns a dictionary with user data"""
         return {
             "ID": self.emp_id,
             "Full Name": self.fullname,
@@ -46,4 +49,5 @@ class Employee:
         }
 
     def __str__(self):
+        """Returns a string with user data"""
         return f"Employee: {self.fullname} (ID: {self.emp_id} | Department:{self.department})"

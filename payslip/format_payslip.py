@@ -1,11 +1,10 @@
 def format_payslip(payroll_data: dict) -> str:
-    """
-    Formats the payroll dictionary into a human-readable English payslip.
-    """
+    """Formats the payroll dictionary into a human-readable English payslip."""
+
     payslip = f"""
-==================================================
-                PAYSLIP REPORT
-==================================================
+=========================================
+            PAYSLIP REPORT
+=========================================
 Employee Name:      {payroll_data["Full Name"]}
 --------------------------------------------------
 Gross Salary:       {payroll_data["Gross Salary"]:>12.2f} EUR

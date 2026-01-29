@@ -14,6 +14,8 @@ class EmailService:
         self.port = 587
 
     def send_payslip(self, recipient_email, subject, body_text):
+        """Sends an email (payslip) based on SMTP protocol"""
+
         message = MIMEMultipart()
         message["From"] = self.sender_email
         message["To"] = recipient_email

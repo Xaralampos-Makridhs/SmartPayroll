@@ -6,6 +6,8 @@ class PayrollCalculator:
     EMPLOYER_CONTRIBUTION_RATE=0.2229 #22.29%
 
     def calculate_employee_payroll(self,employee:Employee)->dict:
+        """Calculates the salary based on insurance rate,tax rate and employee contribution rate"""
+
         base=employee.base_salary
         overtime_pay=employee.calculate_gross_salary()
 

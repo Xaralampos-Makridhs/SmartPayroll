@@ -34,6 +34,7 @@ class CSVHandler:
         return last_id+1
 
     def save_employee(self,emp_dict:dict):
+        """Save employee data in the .csv file"""
         new_id=self._get_next_id()
         emp_dict["ID"]=new_id
 
@@ -43,6 +44,7 @@ class CSVHandler:
         return new_id
 
     def load_all_employees(self):
+        """Load the employee data from .csv file """
         employees=[]
         try:
             with open(self.filepath,"r",encoding="utf-8") as f:
@@ -64,6 +66,7 @@ class CSVHandler:
 
 
     def delete_employee(self,emp_id):
+        """Delete an employee base on employee id"""
         data_loaded=self.load_all_employees()
         updated_list=[]
 
@@ -83,6 +86,7 @@ class CSVHandler:
             return False
 
     def update_employee(self, updated_emp: Employee) -> bool:
+        """Update data of an employee based in employee id"""
         data_loaded = self.load_all_employees()
         new_data = []
         found = False
