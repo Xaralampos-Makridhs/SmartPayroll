@@ -1,4 +1,4 @@
-# payroll_calculator
+# Smart Payroll
 
 Payroll Calculator — a simple payroll management system written in Python for calculating salaries, generating reports, managing employees in a CSV file, and bulk-sending payslips via SMTP.
 
