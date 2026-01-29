@@ -1,4 +1,4 @@
-def format_payslip(self, payroll_data: dict) -> str:
+def format_payslip(payroll_data: dict) -> str:
     """
     Formats the payroll dictionary into a human-readable English payslip.
     """
