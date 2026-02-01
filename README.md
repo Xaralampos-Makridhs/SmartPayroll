@@ -2,7 +2,7 @@
 
 Payroll Calculator — a simple payroll management system written in Python for calculating salaries, generating reports, managing employees in a CSV file, and bulk-sending payslips via SMTP.
 
-Repository: [Xaralampos-Makridhs/payroll_calculator](https://github.com/Xaralampos-Makridhs/payroll_calculator)
+Repository: [Xaralampos-Makridhs/payroll_calculator](https://github.com/Xaralampos-Makridhs/SmartPayroll)
 
 ---
 
