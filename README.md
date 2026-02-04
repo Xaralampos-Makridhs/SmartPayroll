@@ -139,9 +139,3 @@ License
 Contact
 - For questions about this repository, open an issue on GitHub: https://github.com/Xaralampos-Makridhs/SmartPayroll/issues
 
----
-
-If you want, I can also:
-- Create a suggested `requirements.txt` (e.g., with `python-dotenv`) and add it.
-- Create a `.env.example`.
-- Create a CONTRIBUTING.md or a GitHub Actions workflow to run tests.
